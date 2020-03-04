@@ -1,7 +1,6 @@
-[ ] get pycharm
+[x] get pycharm
 [ ] Try pycharm tests
 [ ] do the Set implementation in PyCharm
-[ ] use jenv in concourse demo ?
-[ ] port demo to java 11 ?
+[x] use jenv in concourse demo ?
 [ ] show how a change in the code breaks UI tests
 
