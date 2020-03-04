@@ -1,8 +1,5 @@
 from set import Set
 
-#####################
-# Here be our tests #
-#####################
 def test_emptiness():
     empty = Set()
     one = Set()
