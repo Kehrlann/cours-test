@@ -1,5 +1,6 @@
 from set import Set
 
+
 def test_emptiness():
     empty = Set()
     one = Set()
@@ -8,6 +9,7 @@ def test_emptiness():
 
     assert empty.empty() is True
     assert one.empty() is False
+
 
 def test_size():
     empty = Set()
@@ -21,4 +23,3 @@ def test_size():
     assert empty.size() == 0
     assert one.size() == 1
     assert many.size() > 1
-
