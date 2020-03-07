@@ -22,3 +22,7 @@ def test_emptiness():
 
     assert empty.empty() is True
     assert one.empty() is False
+
+def test_fail():
+    compare = 1 > 2
+    assert compare is True
