@@ -1,4 +1,4 @@
-from tests.stack.stack import Stack
+from stack import Stack
 
 
 def rpn(*args):

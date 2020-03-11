@@ -1,4 +1,4 @@
-from tests.stack.reverse_polish import rpn
+from reverse_polish import rpn
 
 
 def test_reverse_polish():
