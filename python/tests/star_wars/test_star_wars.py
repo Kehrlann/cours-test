@@ -14,7 +14,7 @@ class TestListMovies:
 
     def test_returns_movies_in_alphabetical_order(self, mocker):
         mock_get = Mock()
-        mock_get().json.return_value = {"results": [
+        mock_get.return_value.json.return_value = {"results": [
             {'title': 'A New Orange'},
             {'title': 'The Potato Strikes Back'},
             {'title': 'Return of the Pineapple'}
