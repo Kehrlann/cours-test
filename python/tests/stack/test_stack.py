@@ -52,3 +52,16 @@ def test_pop():
 
     with pytest.raises(EmptyStackError):
         Stack().pop()
+
+
+def test_clone():
+    stack = Stack()
+    stack.push("one")
+    stack.push("two")
+
+    cloned_stack = stack.clone()
+
+    cloned_contents = [cloned_stack.pop(), cloned_stack.pop()]
+    assert cloned_contents == ["two", "one"]
+    assert len(cloned_stack) == 0
+    assert len(stack) == 2

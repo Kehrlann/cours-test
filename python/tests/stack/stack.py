@@ -1,4 +1,4 @@
-class ArrayStack:
+class ListStack:
     def __init__(self):
         self._elements = []
 
@@ -18,27 +18,36 @@ class ArrayStack:
             raise EmptyStackError()
         return self._elements.pop()
 
+    def clone(self):
+        clone = ListStack()
+        clone._elements = [x for x in self._elements]
+        return clone
+
     def __len__(self):
         return len(self._elements)
 
 
-class Stack:
+class LinkedStack:
     class Link:
         def __init__(self, value, previous):
             self.value = value
             self.previous = previous
+
+        def clone(self):
+            cloned_previous = None if self.previous is None else self.previous.clone()
+            clone = LinkedStack.Link(self.value, cloned_previous)
+            return clone
 
     def __init__(self):
         self._size = 0
         self._top = None
 
     def empty(self):
-        return self._top == None
+        return self._top is None
 
     def push(self, element):
-        self._empty = False
         self._size += 1
-        self._top = Stack.Link(element, self._top)
+        self._top = LinkedStack.Link(element, self._top)
 
     def peek(self):
         if self.empty():
@@ -53,9 +62,19 @@ class Stack:
         self._size -= 1
         return value
 
+    def clone(self):
+        clone = LinkedStack()
+        clone._top = self._top.clone()
+        clone._size = self._size
+        return clone
+
     def __len__(self):
         return self._size
 
 
 class EmptyStackError(Exception):
+    pass
+
+
+class Stack(ListStack):
     pass
