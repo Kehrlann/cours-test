@@ -45,8 +45,9 @@ def test_pop():
     stack.push("two")
     stack.push("three")
 
-    assert stack.peek() == "three"
-    assert stack.pop() == "three"
+    popped = stack.pop()
+
+    assert popped == "three"
     assert stack.peek() == "two"
     assert len(stack) == 2
 
