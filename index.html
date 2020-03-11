@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Méthodes et outils de test</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/white.css" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+    <style type="text/css">
+      .reveal section img {
+        border: none;
+        background: none;
+        box-shadow: none;
+      }
+
+      .reveal .centering {
+        width: 100%;
+        text-align: center;
+      }
+
+      .reveal pre code {
+        padding: 24px;
+        max-height: none;
+      }
+
+      .reveal h2 {
+        margin-bottom: 1em;
+      }
+
+      #profile-pic {
+        height: 300px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown>
+          <textarea data-template>
+            # Méthodes et outils de test
+
+            <br>
+
+            ## Tests automatisés
+
+            <br>
+            <br>
+
+            #### Mines Paristech
+            #### 13 / 03 / 2020
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Daniel Garnier-Moiroux
+
+            <img src="images/profile_picture.jpeg" id="profile-pic">
+            <br>
+
+            Software Engineer @ Pivotal Labs
+
+            [@Kehrlann](https://twitter.com/Kehrlann)
+
+            https://github.com/Kehrlann
+            https://github.com/Kehrlann/cours-test
+
+            daniel@garnier.wf
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Aujourd'hui, du logiciel partout
+
+            <img src="images/issues_de_secours.png" height="600px">
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Plan
+
+            1. Introduction
+            2. Historique des projets logiciels et des méthodos
+            3. Philosophie de "l'agilité"
+            4. Quelques exemples de Méthodes Agiles™
+            5. Exercice pratique
+          </textarea>
+        </section>
+        <section data-markdown data-background-image="images/colossus.jpg" data-background-size="contain">
+        </section>
+      </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        width: 1400,
+        height: 1080,
+        history: true,
+        transition: "none",
+        backgroundTransition: "none",
+        hash: true,
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/highlight/highlight.js" },
+          { src: "plugin/notes/notes.js", async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>
