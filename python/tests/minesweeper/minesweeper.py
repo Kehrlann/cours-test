@@ -18,4 +18,5 @@ if __name__ == "__main__":
         x, y = read_input()
         game.reveal(x, y)
 
+    print_board(game.current_state())
     game.print_result()
