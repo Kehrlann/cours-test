@@ -1,3 +1,18 @@
+# Obviously, this program doesn't work. Most of the functions
+# are not event defined. The idea is to show you how you could
+# structure a program to make it testable.
+#
+# Here, the game logic if contained in the Minesweeper class,
+# which can be tested in isolation, without reading from the
+# command line.
+#
+# You can also test "print_board" by itself.
+#
+# Compare it with a program that was not designed with tests in
+# mind, which is very hard to test:
+#
+# https://gist.github.com/mohd-akram/3057736
+#
 class Minesweeper:
     def reveal(self, x, y):
         pass
