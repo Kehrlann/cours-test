@@ -36,7 +36,13 @@ def showgrid(grid):
         row = '{0:2} |'.format(idx + 1)
 
         for j in i:
-            row = row + ' ' + j + ' |'
+            if j == ' ':
+                display = '~'
+            elif j == '0':
+                display = ' '
+            else:
+                display = j
+            row = row + ' ' + display + ' |'
 
         print(row + '\n' + horizontal)
 

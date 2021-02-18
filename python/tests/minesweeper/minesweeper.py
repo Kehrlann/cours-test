@@ -23,15 +23,24 @@ class Minesweeper:
     def current_state(self):
         pass
 
+    def print_state(self):
+        pass
+
+    def print_result(self):
+        pass
+
+
+def read_input():
+    return None, None
+
 
 if __name__ == "__main__":
     game = Minesweeper()
 
     while not game.is_finished():
-        print_board(game.current_state())
-        print_help_message()
+        game.print_state()
         x, y = read_input()
         game.reveal(x, y)
 
-    print_board(game.current_state())
+    game.print_state()
     game.print_result()
