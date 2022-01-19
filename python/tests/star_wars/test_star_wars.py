@@ -1,4 +1,4 @@
-from star_wars import list_movies
+from .star_wars import list_movies
 from unittest.mock import Mock
 
 
