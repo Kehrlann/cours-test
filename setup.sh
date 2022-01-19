@@ -11,6 +11,8 @@ pushd reveal.js
   npm i
 popd
 
+rm "$SCRIPT_DIR"/reveal.js/index.html
 ln -s "$SCRIPT_DIR"/index.html "$SCRIPT_DIR"/reveal.js/index.html
+rm "$SCRIPT_DIR"/reveal.js/images
 ln -s "$SCRIPT_DIR"/images "$SCRIPT_DIR"/reveal.js/images
 
