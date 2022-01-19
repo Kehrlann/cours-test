@@ -1,176 +1,107 @@
 <!DOCTYPE html>
 <html>
-  <head>
+	<head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Méthodes et outils de test</title>
 
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/reveal.css" />
-    <link rel="stylesheet" href="css/theme/white.css" />
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css" id="theme">
 
-    <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/monokai.css" />
-
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.type = "text/css";
-      link.href = window.location.search.match(/print-pdf/gi)
-        ? "css/print/pdf.css"
-        : "css/print/paper.css";
-      document.getElementsByTagName("head")[0].appendChild(link);
-    </script>
-    <style type="text/css">
-      .reveal section img {
-        border: none;
-        background: none;
-        box-shadow: none;
-      }
-
-      .reveal .centering {
-        width: 100%;
-        text-align: center;
-      }
-
-      .reveal pre code {
-        padding: 24px;
-        max-height: none;
-      }
-
-      .reveal h2 {
-        margin-bottom: 1em;
-      }
-
-      #profile-pic {
-        height: 300px;
-        border-radius: 50%;
-      }
-    </style>
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
         <section data-markdown>
-          <textarea data-template>
-            # Méthodes et outils de test
-
-            <br>
-
-            ## Tests automatisés
-
-            <br>
-            <br>
-
-            #### Mines Paristech
-            #### 19 / 02 / 2021
-          </textarea>
-        </section>
-        <section data-markdown>
-          <textarea data-template>
+          <script type="text/template">
             ## Daniel Garnier-Moiroux
 
-            <img src="images/profile_picture.jpeg" id="profile-pic">
-            <br>
+            <img src="images/profile_picture.jpeg" height="300px" style="border-radius: 50%;">
 
             Software Engineer @ VMware
-
-            [@Kehrlann](https://twitter.com/Kehrlann)
 
             https://github.com/Kehrlann
 
             daniel@garnier.wf
-          </textarea>
-        </section>
-        <section data-markdown>
-          <textarea data-template>
+
+            ---
+
             ## Aujourd'hui, du logiciel partout
-
-            (ça vous rappelle quelque chose ?)
-
-            <img height="400px" style="visibility: hidden;">
-          </textarea>
-        </section>
-        <section data-markdown>
-          <textarea data-template>
-            ## Aujourd'hui, du logiciel partout
-
-            (ça vous rappelle quelque chose ?)
 
             <img src="images/ariane-5.gif" height="400px">
-          </textarea>
-        </section>
-        <section data-markdown>
-          <textarea data-template>
+
+            ---
+
             ## Plan
 
             1. Tour d'horizon théorique
             2. En pratique
-          </textarea>
+          </script>
         </section>
         <section data-markdown>
-          <textarea data-template>
+          <script type="text/template">
             # Tour d'horizon théorique
 
             <br>
             <br>
 
             Pourquoi ? Comment ?
-          </textarea>
+          </script>
         </section>
         <section data-markdown data-background-image="images/mercury.jpg" data-background-size="contain">
         </section>
         <section data-markdown>
-          <textarea data-template>
+          <script type="text/template">
             <img src="images/cahier-de-tests.png" height="500px">
-          </textarea>
+          </script>
         </section>
         <section data-markdown>
-          <textarea data-template>
+          <script type="text/template">
             <img src="images/software-tester-walks-into-a-bar.jpg" height="500px">
-          </textarea>
+          </script>
         </section>
         <section data-markdown>
-          <textarea data-template>
-            # Tests automatisés
-
-            <br>
-
-            - Des **cas** de tests
+          <script type="text/template">
+            - <!-- .element: class="fragment" -->
+            Des **cas** de tests
               - _Le bouton payer amène sur la page Paiement_
-            - Des **fixtures** == préconditions à un test
+            - <!-- .element: class="fragment" -->
+            Des **fixtures** == préconditions à un test
               - _Ajouter 3 items au panier_
-            - Des **actions**, "le code à tester"
+            - <!-- .element: class="fragment" -->
+            Des **actions**, "le code à tester"
               - _Cliquer sur Payer_ 
-            - Des **assertions**
+            - <!-- .element: class="fragment" -->
+            Des **assertions**
               - _L'utilisateur est sur la page panier_
               - _Le prix affiché est 24,50€_
-            - Exécutés avec un **test runner**
-            - Produisent des **résultats**, dans un format donné (souvent textuel)
-          </textarea>
+            - <!-- .element: class="fragment" -->
+            Exécutés avec un **test runner**
+            - <!-- .element: class="fragment" -->
+            Produisent des **résultats**, dans un format donné (souvent textuel)
+          </script>
         </section>
         <section data-markdown>
-          <textarea data-template>
+          <script type="text/template">
             <img src="images/sunit.png" height="700px">
-          </textarea>
+          </script>
         </section>
         <section data-markdown>
-          <textarea data-template>
+          <script type="text/template">
             <img src="images/anomaly-detection.png">
-          </textarea>
+          </script>
         </section>
         <section data-markdown>
-          <textarea data-template>
+          <script type="text/template">
             <img src="images/testing-pyramid.png" height="500px">
-          </textarea>
+          </script>
         </section>
         <section data-markdown>
-          <textarea data-template>
+          <script type="text/template">
             ## Propriétés désirables des tests
 
             - Isolated
@@ -185,10 +116,10 @@
             - Specific
             - Deterministic
             - Predictive
-          </textarea>
+          </script>
         </section>
         <section data-markdown>
-          <textarea data-template>
+          <script type="text/template">
             ## Combinaisons possibles:
 
             - Unit tests: Inspiring, writable, specific, fast ... not predictive ?
@@ -197,42 +128,42 @@
               - Automated
               - Isolated, Composable, Deterministic
               - Specific
-          </textarea>
+          </script>
         </section>
         <section data-markdown>
-          <textarea data-template>
+          <script type="text/template">
             ## Les frameworks
 
             - Pytest: https://docs.pytest.org/
             - JUnit: https://junit.org/junit5/
             - Catch2: https://github.com/catchorg/Catch2
-          </textarea>
+          </script>
         </section>
         <section data-markdown>
-          <textarea data-template>
+          <script type="text/template">
             ## En pratique
             
             <img src="images/typing-cat.gif" height="500px">
-          </textarea>
+          </script>
         </section>
         <section data-markdown>
-          <textarea data-template>
+          <script type="text/template">
             ## TDD
 
             <img src="images/red-green-refactor.jpg" height="500px">
-          </textarea>
+          </script>
         </section>
         <section data-markdown>
-          <textarea data-template>
+          <script type="text/template">
             ## Mocking
 
             - pytest-mock: https://github.com/pytest-dev/pytest-mock 
             - Mockito: https://site.mockito.org/
             - FakeIt: https://github.com/eranpeer/FakeIt
-          </textarea>
+          </script>
         </section>
         <section data-markdown>
-          <textarea data-template>
+          <script type="text/template">
             ## Repository du cours
 
             https://github.com/Kehrlann/python-test-examples
@@ -243,7 +174,7 @@
             ## Repository du TP
 
             https://github.com/Kehrlann/python-tests
-          </textarea>
+          </script>
         </section>
         <!-- 
             https://github.com/Kehrlann/cours-test
@@ -251,26 +182,47 @@
       </div>
     </div>
 
-    <script src="js/reveal.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="dist/reveal.js"></script>
 
     <script>
       // More info about config & dependencies:
       // - https://github.com/hakimel/reveal.js#configuration
       // - https://github.com/hakimel/reveal.js#dependencies
+      //Reveal.initialize({
+      //  width: 1400,
+      //  height: 1080,
+      //  history: true,
+      //  transition: "none",
+      //  backgroundTransition: "none",
+      //  hash: true,
+      //  dependencies: [
+      //    { src: "plugin/markdown/marked.js" },
+      //    { src: "plugin/markdown/markdown.js" },
+      //    { src: "plugin/highlight/highlight.js" },
+      //    { src: "plugin/notes/notes.js", async: true }
+      //  ]
+      //});
       Reveal.initialize({
-        width: 1400,
-        height: 1080,
-        history: true,
-        transition: "none",
-        backgroundTransition: "none",
-        hash: true,
-        dependencies: [
-          { src: "plugin/markdown/marked.js" },
-          { src: "plugin/markdown/markdown.js" },
-          { src: "plugin/highlight/highlight.js" },
-          { src: "plugin/notes/notes.js", async: true }
-        ]
-      });
+              plugins: [RevealMarkdown, RevealHighlight],
+//              width: 1400,
+//              height: 1080,
+              history: true,
+              transition: "none",
+              backgroundTransition: "none"
+            });
+
+			const loadScript = src => {
+				return new Promise((resolve, reject) => {
+						const script = document.createElement('script');
+						script.type = 'text/javascript';
+						script.onload = resolve;
+						script.onerror = reject;
+						script.src = src;
+						document.head.append(script);
+				})
+			}
     </script>
   </body>
 </html>
