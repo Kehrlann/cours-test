@@ -32,40 +32,44 @@
 
             ## Aujourd'hui, du logiciel partout
 
-            <img src="images/ariane-5.gif" height="400px">
-
             ---
 
             ## Plan
 
             1. Tour d'horizon théorique
             2. En pratique
-          </script>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
+
+            ---
+            
             # Tour d'horizon théorique
 
             <br>
             <br>
 
             Pourquoi ? Comment ?
-          </script>
-        </section>
-        <section data-markdown data-background-image="images/mercury.jpg" data-background-size="contain">
-        </section>
-        <section data-markdown>
-          <script type="text/template">
-            <img src="images/cahier-de-tests.png" height="500px">
-          </script>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
-            <img src="images/software-tester-walks-into-a-bar.jpg" height="500px">
-          </script>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
+
+            ---
+
+            ## Pourquoi ?
+
+            ---
+
+            ## ...
+
+            <img src="images/ariane-5.gif" height="400px">
+
+            ---
+
+            ## ... parce que
+
+            <img src="images/ariane-5-boom.gif" height="400px">
+
+            ---
+
+            ## Comment ?
+
+            ---
+
             - <!-- .element: class="fragment" -->
             Des **cas** de tests
               - _Le bouton payer amène sur la page Paiement_
@@ -83,43 +87,62 @@
             Exécutés avec un **test runner**
             - <!-- .element: class="fragment" -->
             Produisent des **résultats**, dans un format donné (souvent textuel)
-          </script>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
+            
+            ---
+            
             <img src="images/sunit.png" height="700px">
-          </script>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
+
+            ---
+
+            <img src="images/cahier-de-tests.png" height="500px">
+
+            ---
+
+            <img src="images/software-tester-walks-into-a-bar.jpg" height="500px">
+
+            ---
+
             <img src="images/anomaly-detection.png">
-          </script>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
+
+            ---
+
             <img src="images/testing-pyramid.png" height="500px">
-          </script>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
+
+            ---
+
             ## Propriétés désirables des tests
 
-            - Isolated
-            - Composable
-            - Fast
-            - Inspiring
-            - Writable
-            - Readable
-            - Behavioral
-            - Structure-insensitive
-            - Automated
-            - Specific
-            - Deterministic
-            - Predictive
-          </script>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
+            <table>
+              <tbody>
+                <tr>
+                  <td>Isolated</td>
+                  <td>Behavioral</td>
+                </tr>
+                <tr>
+                  <td>Composable</td>
+                  <td>Structure-insensitive</td>
+                </tr>
+                <tr>
+                  <td>Fast</td>
+                  <td>Automated</td>
+                </tr>
+                <tr>
+                  <td>Inspiring</td>
+                  <td>Specific</td>
+                </tr>
+                <tr>
+                  <td>Writable</td>
+                  <td>Deterministic</td>
+                </tr>
+                <tr>
+                  <td>Readable</td>
+                  <td>Predictive</td>
+                </tr>
+              </tbody>
+            </table>
+
+            ---
+
             ## Combinaisons possibles:
 
             - Unit tests: Inspiring, writable, specific, fast ... not predictive ?
@@ -128,42 +151,37 @@
               - Automated
               - Isolated, Composable, Deterministic
               - Specific
-          </script>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
+
+            ---
+
             ## Les frameworks
 
             - Pytest: https://docs.pytest.org/
-            - JUnit: https://junit.org/junit5/
             - Catch2: https://github.com/catchorg/Catch2
-          </script>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
+
+            ---
+
             ## En pratique
             
             <img src="images/typing-cat.gif" height="500px">
-          </script>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
+            
+            ---
+
             ## TDD
 
             <img src="images/red-green-refactor.jpg" height="500px">
-          </script>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
+
+            ---
+
             ## Mocking
 
-            - pytest-mock: https://github.com/pytest-dev/pytest-mock 
-            - Mockito: https://site.mockito.org/
-            - FakeIt: https://github.com/eranpeer/FakeIt
-          </script>
-        </section>
-        <section data-markdown>
-          <script type="text/template">
+            - pytest-mock
+              - https://github.com/pytest-dev/pytest-mock 
+            - FakeIt
+              - https://github.com/eranpeer/FakeIt
+
+            ---
+
             ## Repository du cours
 
             https://github.com/Kehrlann/python-test-examples
@@ -176,9 +194,6 @@
             https://github.com/Kehrlann/python-tests
           </script>
         </section>
-        <!-- 
-            https://github.com/Kehrlann/cours-test
-        -->
       </div>
     </div>
 
@@ -187,27 +202,8 @@
     <script src="dist/reveal.js"></script>
 
     <script>
-      // More info about config & dependencies:
-      // - https://github.com/hakimel/reveal.js#configuration
-      // - https://github.com/hakimel/reveal.js#dependencies
-      //Reveal.initialize({
-      //  width: 1400,
-      //  height: 1080,
-      //  history: true,
-      //  transition: "none",
-      //  backgroundTransition: "none",
-      //  hash: true,
-      //  dependencies: [
-      //    { src: "plugin/markdown/marked.js" },
-      //    { src: "plugin/markdown/markdown.js" },
-      //    { src: "plugin/highlight/highlight.js" },
-      //    { src: "plugin/notes/notes.js", async: true }
-      //  ]
-      //});
       Reveal.initialize({
               plugins: [RevealMarkdown, RevealHighlight],
-//              width: 1400,
-//              height: 1080,
               history: true,
               transition: "none",
               backgroundTransition: "none"
