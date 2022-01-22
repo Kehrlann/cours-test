@@ -72,24 +72,53 @@
 
             - <!-- .element: class="fragment" -->
             Des **cas** de tests
-              - _Le bouton payer amène sur la page Paiement_
             - <!-- .element: class="fragment" -->
             Des **fixtures** == préconditions à un test
-              - _Ajouter 3 items au panier_
             - <!-- .element: class="fragment" -->
             Des **actions**, "le code à tester"
-              - _Cliquer sur Payer_ 
             - <!-- .element: class="fragment" -->
             Des **assertions**
-              - _L'utilisateur est sur la page panier_
-              - _Le prix affiché est 24,50€_
             - <!-- .element: class="fragment" -->
             Exécutés avec un **test runner**
             - <!-- .element: class="fragment" -->
             Produisent des **résultats**, dans un format donné (souvent textuel)
-            
+
             ---
-            
+
+            - Des **cas** de tests
+              - <!-- .element: class="fragment" -->
+              _Le bouton payer amène sur la page Paiement_
+            - Des **fixtures** == préconditions à un test
+              - <!-- .element: class="fragment" -->
+              _Ajouter 3 items au panier_
+            - Des **actions**, "le code à tester"
+              - <!-- .element: class="fragment" -->
+              _Cliquer sur Payer_ 
+            - Des **assertions**
+              - <!-- .element: class="fragment" -->
+              _L'utilisateur est sur la page panier_
+              - <!-- .element: class="fragment" -->
+              _Le prix affiché est 24,50€_
+
+            ---
+
+            ```python [|1,2|3-6|7-9|10-12]
+            # Cas de test
+            def test_retour_arriere_impossible():
+              # Arrange (fixtures)
+              snake = Snake([(3,10), (3, 11), (3,12)])
+              snake.set_direction("DOWN")
+
+              # Act
+              has_changed_direction = snake.set_direction("UP")
+
+              # Assert
+              assert has_changed_direction == False
+              assert snake.direction == "DOWN"
+            ```
+
+            ---
+
             <img src="images/sunit.png" height="700px">
 
             ---
