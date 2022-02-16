@@ -36,6 +36,12 @@
 
             ---
 
+            ## Du soft _partout_
+
+            <img src="images/issues_de_secours.png" height="300px">
+
+            ---
+
             ## Plan
 
             1. Tour d'horizon théorique
@@ -68,12 +74,6 @@
 
             ---
 
-            ## Du soft _partout_
-
-            <img src="images/issues_de_secours.png" height="300px">
-
-            ---
-
             ## Le logiciel n'est pas un pont
 
 
@@ -88,6 +88,112 @@
             ---
 
             ## Comment ?
+
+            ---
+
+            <img src="images/cahier-de-tests.png" height="500px">
+
+            ---
+
+            ```python []
+            from examples import rpn
+
+
+
+
+            resultat = rpn.compute("1 2 +")
+
+
+
+
+
+
+
+
+
+            ```
+
+            ---
+
+            ```python [3,4]
+            from examples import rpn
+
+            print("test addition")
+            attendu = 3
+
+            resultat = rpn.compute("1 2 +")
+
+
+
+
+
+
+
+
+
+            ```
+
+            ---
+
+            ```python [7]
+            from examples import rpn
+
+            print("test addition")
+            attendu = 3
+
+            resultat = rpn.compute("1 2 +")
+            print(f"{attendu} == {resultat} ?")
+
+
+
+
+
+
+
+
+            ```
+
+            ---
+
+            ```python [7-11]
+            from examples import rpn
+
+            print("test addition")
+            attendu = 3
+
+            resultat = rpn.compute("1 2 +")
+            print(f"{attendu} == {resultat} ?")
+            if attendu == resultat:
+                print("~~~~~~~~> OK 🎉")
+            else:
+                print("~~~~~~~~> Oh non 😢")
+
+
+
+
+            ```
+            ---
+
+            ```python [5,12-15|]
+            from examples import rpn
+
+            print("test addition")
+            attendu = 3
+            try:
+                resultat = rpn.compute("1 2 +")
+                print(f"{attendu} == {resultat} ?")
+                if attendu == resultat:
+                    print("~~~~~~~~> OK 🎉")
+                else:
+                    print("~~~~~~~~> Oh non 😢")
+            except Exception as e:
+                print("Erreur dans le test... 💥")
+                print(e)
+            ```
+
+            ---
+
+            <img src="images/sunit.png" height="700px">
 
             ---
 
@@ -138,18 +244,33 @@
               assert snake.direction == "DOWN"
             ```
 
-            ---
-
-            <img src="images/sunit.png" height="700px">
 
             ---
 
-            <img src="images/cahier-de-tests.png" height="500px">
+            ## Les frameworks
+
+            - Pytest: https://docs.pytest.org/
+            - Catch2: https://github.com/catchorg/Catch2
 
             ---
 
-            <img src="images/software-tester-walks-into-a-bar.jpg" height="500px">
+            ## En pratique
+            
+            <img src="images/typing-cat.gif" height="500px">
+            
+            ---
 
+            ## Repository du cours
+
+            https://github.com/Kehrlann/python-test-examples
+
+            <br>
+            <br>
+
+            ## Repository du TP
+
+            https://github.com/Kehrlann/python-tests
+          
             ---
 
             <img src="images/anomaly-detection.png">
@@ -204,19 +325,6 @@
               - Isolated, Composable, Deterministic
               - Specific
 
-            ---
-
-            ## Les frameworks
-
-            - Pytest: https://docs.pytest.org/
-            - Catch2: https://github.com/catchorg/Catch2
-
-            ---
-
-            ## En pratique
-            
-            <img src="images/typing-cat.gif" height="500px">
-            
             ---
 
             ## TDD
